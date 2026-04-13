@@ -6,7 +6,6 @@ public class RobertoInteragir : MonoBehaviour
 {
     public Rigidbody2D Roberto;
     public TMP_Text Entrar;
-    public GameObject blackScreen;
     public bool fadeout = false;
     bool home = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,14 +19,14 @@ public class RobertoInteragir : MonoBehaviour
     {
         if (home && Keyboard.current.eKey.isPressed)
         {
-            Debug.Log("nigga");
+            Debug.Log("entra dentro da casa Roberto!!!!!!");
             home = false;
             Entrar.gameObject.SetActive(false);
             fadeout = true;
         }
         if (fadeout)
         {
-            blackScreen.GetComponent<SpriteRenderer>().material.color += new Color(1.0f, 1.0f, 1.0f, 0.1f);
+            FindAnyObjectByType<Fadeout>().OnGUI();
         }
     }
     public void OnTriggerEnter2D(Collider2D collider)
@@ -43,6 +42,7 @@ public class RobertoInteragir : MonoBehaviour
         if (collider.name == "Home")
         {
             home = false;
+            Entrar.gameObject.SetActive(false);
         }
     }
 }

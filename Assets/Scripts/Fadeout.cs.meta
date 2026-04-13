@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f7c001e05e658b14b86ce32d3add1dbd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - blackscreen: {fileID: 2800000, guid: db750325989564987a34393247d883b4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
