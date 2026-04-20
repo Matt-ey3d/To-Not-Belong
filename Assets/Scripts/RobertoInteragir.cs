@@ -25,11 +25,13 @@ public class RobertoInteragir : MonoBehaviour
         if (home && Keyboard.current.eKey.isPressed)
         {
             Debug.Log("entra dentro da casa Roberto!!!!!!");
+            Roberto.GetComponent<MudaCena>().ChangeScene();
             home = false;
             Entrar.gameObject.SetActive(false);
             fadeout = true;
         }
     }
+    /*
     public void OnGUI()
     {
         if (fadeout)
@@ -46,6 +48,12 @@ public class RobertoInteragir : MonoBehaviour
         fadeDir = direction;
         return (fadeSpeed);
     }
+    void OnLevelWasLoaded()
+    {
+        alpha = 1;
+        BeginFade(-1);
+    }
+    */
     public void OnTriggerEnter2D(Collider2D collider)
     {
         if(collider.name == "Home")
