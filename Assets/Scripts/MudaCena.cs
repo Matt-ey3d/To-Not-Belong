@@ -11,7 +11,14 @@ public class MudaCena : MonoBehaviour
     }
     public void ChangeScene()
     {
-        SceneManager.LoadScene(1);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SceneManager.LoadScene(1);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     // Update is called once per frame
