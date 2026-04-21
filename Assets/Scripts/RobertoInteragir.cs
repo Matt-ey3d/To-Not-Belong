@@ -1,13 +1,15 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using NUnit.Framework;
 
 public class RobertoInteragir : MonoBehaviour
 {
     public Rigidbody2D Roberto;
-    public TMP_Text Entrar;
+    public TMP_Text Texto;
     public bool fadeout = false;
     bool home = false;
+    bool goOutside = false;
     public Texture2D fadeOutTexture;
     public float fadeSpeed;
     private int drawDepth = -1000;
@@ -22,13 +24,24 @@ public class RobertoInteragir : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (home && Keyboard.current.eKey.isPressed)
+        if (Keyboard.current.eKey.isPressed)
         {
-            Debug.Log("entra dentro da casa Roberto!!!!!!");
-            Roberto.GetComponent<MudaCena>().ChangeScene();
-            home = false;
-            Entrar.gameObject.SetActive(false);
-            fadeout = true;
+            if (home)
+            {
+                Debug.Log("entra dentro da casa Roberto!!!!!!");
+                Roberto.GetComponent<MudaCena>().ChangeScene();
+                home = false;
+                Texto.gameObject.SetActive(false);
+                fadeout = true;
+            }
+            else if (goOutside)
+            {
+                Debug.Log("sai para fora da casa Roberto!!!!!!");
+                Roberto.GetComponent<MudaCena>().ChangeScene();
+                goOutside = false;
+                Texto.gameObject.SetActive(false);
+                fadeout = true;
+            }
         }
     }
     /*
@@ -59,7 +72,14 @@ public class RobertoInteragir : MonoBehaviour
         if(collider.name == "Home")
         {
             home = true;
-            Entrar.gameObject.SetActive(true);
+            Texto.text = "[E] Entrar";
+            Texto.gameObject.SetActive(true);
+        }
+        else if (collider.name == "Door")
+        {
+            goOutside = true;
+            Texto.text = "[E] Sair";
+            Texto.gameObject.SetActive(true);
         }
     }
     public void OnTriggerExit2D(Collider2D collider)
@@ -67,7 +87,12 @@ public class RobertoInteragir : MonoBehaviour
         if (collider.name == "Home")
         {
             home = false;
-            Entrar.gameObject.SetActive(false);
+            Texto.gameObject.SetActive(false);
+        }
+        else if (collider.name == "Door")
+        {
+            goOutside = false;
+            Texto.gameObject.SetActive(false);
         }
     }
 }

@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Roberto: {fileID: 340178255}
-  Entrar: {fileID: 1531647088}
+  Texto: {fileID: 1531647088}
   fadeout: 0
   fadeOutTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
   fadeSpeed: 2
