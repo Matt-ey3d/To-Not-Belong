@@ -19,7 +19,6 @@ public class MudaCena : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
-        StartCoroutine("EsperaSÛUmBocado");
     }
 
     private IEnumerator EsperaSÛUmBocado()
