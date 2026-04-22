@@ -19,8 +19,13 @@ public class MudaCena : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+        StartCoroutine("EsperaSÛUmBocado");
     }
 
+    private IEnumerator EsperaSÛUmBocado()
+    {
+        yield return new WaitForSeconds(5);
+    }
     // Update is called once per frame
     /*
     IEnumerator OnCollisionEnter(Collision other)
