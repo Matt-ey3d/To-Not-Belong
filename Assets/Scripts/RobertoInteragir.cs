@@ -45,6 +45,9 @@ public class RobertoInteragir : MonoBehaviour
         }
     }
     /*
+
+    
+
     public void OnGUI()
     {
         if (fadeout)
