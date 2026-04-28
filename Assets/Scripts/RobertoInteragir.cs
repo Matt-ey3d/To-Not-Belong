@@ -10,6 +10,7 @@ public class RobertoInteragir : MonoBehaviour
     public bool fadeout = false;
     bool home = false;
     bool goOutside = false;
+    bool cousin = false;
     public Texture2D fadeOutTexture;
     public float fadeSpeed;
     private int drawDepth = -1000;
@@ -42,11 +43,16 @@ public class RobertoInteragir : MonoBehaviour
                 Texto.gameObject.SetActive(false);
                 fadeout = true;
             }
+            else if(cousin)
+            {
+                Debug.Log("fala com os teus primos Roberto!!!!!!!!!!!!!!!!!");
+                Roberto.GetComponent<Falas>().Diálogo();
+                cousin = false;
+                Texto.gameObject.SetActive(false);
+            }
         }
     }
     /*
-
-    
 
     public void OnGUI()
     {
@@ -84,6 +90,12 @@ public class RobertoInteragir : MonoBehaviour
             Texto.text = "[E] Sair";
             Texto.gameObject.SetActive(true);
         }
+        else if (collider.tag=="Cousin")
+        {
+            cousin = true;
+            Texto.text = "[E] Conversar";
+            Texto.gameObject.SetActive(true);
+        }
     }
     public void OnTriggerExit2D(Collider2D collider)
     {
@@ -95,6 +107,11 @@ public class RobertoInteragir : MonoBehaviour
         else if (collider.name == "Door")
         {
             goOutside = false;
+            Texto.gameObject.SetActive(false);
+        }
+        else if (collider.tag == "Cousin")
+        {
+            cousin = false;
             Texto.gameObject.SetActive(false);
         }
     }
