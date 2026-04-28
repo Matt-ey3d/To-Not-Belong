@@ -43,7 +43,7 @@ public class RobertoInteragir : MonoBehaviour
                 Texto.gameObject.SetActive(false);
                 fadeout = true;
             }
-            else if(cousin)
+            else if (cousin)
             {
                 Debug.Log("fala com os teus primos Roberto!!!!!!!!!!!!!!!!!");
                 Roberto.GetComponent<Falas>().Diálogo();

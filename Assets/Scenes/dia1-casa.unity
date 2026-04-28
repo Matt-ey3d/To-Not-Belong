@@ -414,7 +414,8 @@ MonoBehaviour:
   Roberto: {fileID: 340178255}
   Texto: {fileID: 1531647088}
   fadeout: 0
-  fadeOutTexture: {fileID: 0}
+  fadeOutTexture: {fileID: -8328923581568760697, guid: dbe0995f84aefda45ad23e61ef8645b1,
+    type: 3}
   fadeSpeed: 0
 --- !u!114 &340178264
 MonoBehaviour:
@@ -2570,6 +2571,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2253911629886400664, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
+        type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000,
+        type: 0}
     - target: {fileID: -2253911629886400664, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
         type: 3}
       propertyPath: m_Name
