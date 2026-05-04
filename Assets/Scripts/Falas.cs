@@ -1,12 +1,13 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class Falas : MonoBehaviour
 {
     public GameObject dialoguePanel;
-    public Text falatexto;
-    public string[] dialogueRui = { "Olá!", "Viste a centopeia a fugir?", "Era GRANDE!", "Espero que não haja aqui outra..." };
+    public TMP_Text falatexto;
+    public string[] dialogueRui;
     private int index = 0;
     public float Speed;
     public TMP_Text Enter;
@@ -23,6 +24,10 @@ public class Falas : MonoBehaviour
         if (falatexto.text == dialogueRui[index])
         {
             Enter.gameObject.SetActive(true);
+        }
+        if (Keyboard.current.enterKey.isPressed)
+        {
+            PróximaLinha();
         }
     }
     public void Diálogo()
