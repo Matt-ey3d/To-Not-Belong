@@ -11,6 +11,8 @@ public class Falas : MonoBehaviour
     private int index = 0;
     public float Speed;
     public TMP_Text Enter;
+    public bool canClickEnter = true;
+    int contar = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -25,9 +27,10 @@ public class Falas : MonoBehaviour
         {
             Enter.gameObject.SetActive(true);
         }
-        if (Keyboard.current.enterKey.isPressed)
+        if (Keyboard.current.enterKey.isPressed && canClickEnter)
         {
             PróximaLinha();
+            canClickEnter = false;
         }
     }
     public void Diálogo()
@@ -50,11 +53,15 @@ public class Falas : MonoBehaviour
     }
     IEnumerator Typing()
     {
-        foreach (char letter in dialogueRui[index].ToCharArray())
+        contar++;
+        char[] fala = dialogueRui[index].ToCharArray();
+        Debug.Log(contar);
+        foreach (char letter in fala)
         {
             falatexto.text += letter;
             yield return new WaitForSeconds(Speed);
         }
+        canClickEnter = true;
     }
     public void PróximaLinha()
     {
