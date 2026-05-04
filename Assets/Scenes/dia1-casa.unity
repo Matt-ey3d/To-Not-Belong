@@ -456,6 +456,7 @@ MonoBehaviour:
   - "\"Espero que n\xE3o haja aqui outra...\""
   Speed: 0.2
   Enter: {fileID: 672245455729051898}
+  canClickEnter: 1
 --- !u!1 &349220061
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +721,6 @@ RectTransform:
   - {fileID: 1019830057742893794}
   - {fileID: 792539107}
   - {fileID: 1216797885}
-  - {fileID: 865864567}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1521,7 +1521,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 360634968}
+    m_TransformParent: {fileID: 340178257}
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
@@ -1531,7 +1531,7 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
@@ -1541,17 +1541,17 @@ PrefabInstance:
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 350
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 130
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
@@ -1561,12 +1561,12 @@ PrefabInstance:
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -210
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 005bc811e83d51d41a12c56c9d533191,
         type: 3}
@@ -2945,6 +2945,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 194487881}
+    - targetCorrespondingSourceObject: {fileID: 7878350319992209165, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 865864567}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
         type: 3}

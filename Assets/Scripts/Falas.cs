@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 public class Falas : MonoBehaviour
 {
-    public GameObject dialoguePanel;
     public TMP_Text falatexto;
     public string[] dialogueRui;
     private int index = 0;
@@ -35,21 +34,12 @@ public class Falas : MonoBehaviour
     }
     public void Diálogo()
     {
-        if (dialoguePanel.activeInHierarchy)
-        {
-            SemTexto();
-        }
-        else
-        {
-            dialoguePanel.SetActive(true);
             StartCoroutine(Typing());
-        }
     }
     public void SemTexto()
     {
         falatexto.text = "";
         index = 0;
-        dialoguePanel.SetActive(false);
     }
     IEnumerator Typing()
     {
