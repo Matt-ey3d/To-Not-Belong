@@ -12,6 +12,7 @@ public class RobertoInteragir : MonoBehaviour
     bool goOutside = false;
     bool cousin = false;
     public Texture2D fadeOutTexture;
+    public string primo;
     public float fadeSpeed;
     private int drawDepth = -1000;
     private float alpha = 1.0f;
@@ -78,7 +79,7 @@ public class RobertoInteragir : MonoBehaviour
     */
     public void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.name == "Home")
+        if (collider.name == "Home")
         {
             home = true;
             Texto.text = "[E] Entrar";
@@ -90,8 +91,9 @@ public class RobertoInteragir : MonoBehaviour
             Texto.text = "[E] Sair";
             Texto.gameObject.SetActive(true);
         }
-        else if (collider.tag=="Cousin")
+        else if (collider.tag == "Cousin")
         {
+            primo = collider.name;
             cousin = true;
             Texto.text = "[E] Conversar";
             Texto.gameObject.SetActive(true);

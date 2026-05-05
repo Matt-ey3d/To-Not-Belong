@@ -163,7 +163,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: "caixa de di\xE1logo"
+    - name: "caixa de di\xE1logo ou menu ou outra cena assim"
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:

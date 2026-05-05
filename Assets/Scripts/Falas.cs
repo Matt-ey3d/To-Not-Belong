@@ -7,6 +7,9 @@ public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
     public string[] dialogueRui;
+    public string[] dialogueRoberson;
+    //public string[,] dialogue; maybe??
+    public string[] currentDialogue;
     private int index = 0;
     public float Speed;
     public TMP_Text Enter;
@@ -22,7 +25,7 @@ public class Falas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (falatexto.text == dialogueRui[index])
+        if (falatexto.text == currentDialogue[index])
         {
             Enter.gameObject.SetActive(true);
         }
@@ -34,7 +37,16 @@ public class Falas : MonoBehaviour
     }
     public void Diálogo()
     {
-            StartCoroutine(Typing());
+        switch(GetComponent<RobertoInteragir>().primo)
+        {
+            case "Rui":
+                currentDialogue = dialogueRui;
+                break;
+            case "Roberson":
+                currentDialogue = dialogueRoberson;
+                break;
+        }
+        StartCoroutine(Typing());
     }
     public void SemTexto()
     {
@@ -44,7 +56,7 @@ public class Falas : MonoBehaviour
     IEnumerator Typing()
     {
         contar++;
-        char[] fala = dialogueRui[index].ToCharArray();
+        char[] fala = currentDialogue[index].ToCharArray();
         Debug.Log(contar);
         foreach (char letter in fala)
         {
@@ -56,7 +68,7 @@ public class Falas : MonoBehaviour
     public void PróximaLinha()
     {
         Enter.gameObject.SetActive(false);
-        if (index < dialogueRui.Length - 1)
+        if (index < currentDialogue.Length - 1)
         {
             index++;
             falatexto.text = "";
