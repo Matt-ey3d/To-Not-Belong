@@ -48,7 +48,7 @@ public class Falas : MonoBehaviour
         }
         StartCoroutine(Typing());
     }
-    public void SemTexto()
+    public void NoText()
     {
         falatexto.text = "";
         index = 0;
@@ -76,7 +76,7 @@ public class Falas : MonoBehaviour
         }
         else
         {
-            SemTexto();
+            NoText();
         }
     }
 }

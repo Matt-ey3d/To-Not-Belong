@@ -3083,7 +3083,7 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: a51cec89620592e46a173c228112af92,
         type: 3}
       propertyPath: m_Name
-      value: Rui libresprite
+      value: Rui
       objectReference: {fileID: 0}
     - target: {fileID: -2253911629886400664, guid: a51cec89620592e46a173c228112af92,
         type: 3}
@@ -3922,12 +3922,12 @@ PrefabInstance:
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 327.5244
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 73.8734
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}

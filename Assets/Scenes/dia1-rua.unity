@@ -430,12 +430,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2bf59615b03a1b4bb45948695927727, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Falas
-  falatexto: {fileID: 0}
+  falatexto: {fileID: 2055017123}
   dialogueRui: []
-  dialogueRoberson: []
+  dialogueRoberson:
+  - "\"'T\xE3o, Roberto, como \xE9 que vais?\" "
+  - "\"J\xE1 chegaste a ver os teus pais?\" "
+  - "\"Ainda n\xE3o?\" "
+  - "\"Eles h\xE3o de voltar, eu prometo.\""
   currentDialogue: []
-  Speed: 0
-  Enter: {fileID: 0}
+  Speed: 0.02
+  Enter: {fileID: 800315857}
   canClickEnter: 1
 --- !u!1 &349220061
 GameObject:
@@ -1503,12 +1507,12 @@ PrefabInstance:
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 327.5244
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 73.8734
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
@@ -1548,12 +1552,12 @@ PrefabInstance:
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -393.1869
+      value: 235
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -186.6955
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 422060830756547953, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
         type: 3}
@@ -1586,6 +1590,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 800315855}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &800315857 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4410176424626460901, guid: 8f809c982c0d7fc4da7bf23c2bf668fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 800315855}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &1024913488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,12 +2734,12 @@ PrefabInstance:
     - target: {fileID: 7534058604106672926, guid: e20612bd55c043a4dbe4329792016f94,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -392.6317
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7534058604106672926, guid: e20612bd55c043a4dbe4329792016f94,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -182.90218
+      value: -125
       objectReference: {fileID: 0}
     - target: {fileID: 7534058604106672926, guid: e20612bd55c043a4dbe4329792016f94,
         type: 3}
@@ -2751,6 +2767,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2055017121}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2055017123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3234680258961764887, guid: e20612bd55c043a4dbe4329792016f94,
+    type: 3}
+  m_PrefabInstance: {fileID: 2055017121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &2129036516
 GameObject:
   m_ObjectHideFlags: 0
