@@ -1,13 +1,52 @@
 using System.Collections;   
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class MudaCena : MonoBehaviour
 {
+    public Texture2D fadeOutTexture;
+    float alpha = 0.2f;
+    Scene scene;
+    Color currentColor;
+    bool fading = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
+    }
+    // Update is called once per frame
+    private void Update()
+    {
+        /*
+        if (GetComponent<RobertoInteragir>().fadeout == true)
+        {
+            if (fading == false)
+            {
+                fading = true;
+                scene = SceneManager.GetActiveScene();
+            }
+            if (scene == SceneManager.GetActiveScene())
+            {
+                fadeOutTexture.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, alpha);
+                currentColor = fadeOutTexture.GetComponent<SpriteRenderer>().color;
+            }
+            else
+            {
+                fadeOutTexture.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, alpha);
+                currentColor = fadeOutTexture.GetComponent<SpriteRenderer>().color;
+            }
+            if (currentColor.a == 1)
+            {
+                ChangeScene();
+            }
+            else if(currentColor.a == 0 && fading == true)
+            {
+                fading = false;
+                GetComponent<RobertoInteragir>().fadeout = false;
+            }
+        }
+        */
     }
     public void ChangeScene()
     {
@@ -20,13 +59,4 @@ public class MudaCena : MonoBehaviour
             SceneManager.LoadScene(0);
         }
     }
-    // Update is called once per frame
-    /*
-    IEnumerator OnCollisionEnter(Collision other)
-    {
-        float fadeTime = GameObject.Find("Roberto teste libresprite").GetComponent<RobertoInteragir>().BeginFade(1);
-        yield return new WaitForSeconds(fadeTime);
-        SceneManager.LoadScene(1);
-    }
-    */
 }

@@ -10,7 +10,7 @@ public class Falas : MonoBehaviour
     public string[] dialogueRoberson;
     //public string[,] dialogue; maybe??
     public string[] currentDialogue;
-    private int index = 0;
+    int index = 0;
     public float Speed;
     public TMP_Text Enter;
     public bool canClickEnter = true;
