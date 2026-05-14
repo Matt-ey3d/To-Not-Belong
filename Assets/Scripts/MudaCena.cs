@@ -5,7 +5,9 @@ using Unity.VisualScripting;
 
 public class MudaCena : MonoBehaviour
 {
+    //https://stackoverflow.com/questions/31184731/how-to-show-an-image-in-unity-by-code
     public Texture2D fadeOutTexture;
+    public GameObject fadeOut;
     float alpha = 0.2f;
     Scene scene;
     Color currentColor;
@@ -18,7 +20,6 @@ public class MudaCena : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        /*
         if (GetComponent<RobertoInteragir>().fadeout == true)
         {
             if (fading == false)
@@ -46,7 +47,6 @@ public class MudaCena : MonoBehaviour
                 GetComponent<RobertoInteragir>().fadeout = false;
             }
         }
-        */
     }
     public void ChangeScene()
     {
