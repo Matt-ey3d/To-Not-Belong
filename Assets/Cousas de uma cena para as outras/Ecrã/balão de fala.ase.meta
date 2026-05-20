@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ffeebdb5e5338964da9b9d8cc2df2aa1
+guid: ac001f6f256932047ab8b83b52f2461d
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,19 +127,19 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Roberto teste libresprite
+  - name: "bal\xE3o de fala"
     originalName: 
-    pivot: {x: 0.45762712, y: -0.045454547}
-    alignment: 9
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 59
-      height: 44
-    spriteID: a03a1ea3f0c3919449e9a264f6ffb5fd
+      width: 60
+      height: 16
+    spriteID: a98204fe89af85740ba99725179767b2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,25 +153,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 3176888913
+      value0: 3363200168
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: Roberto teste libresprite
+    name: "bal\xE3o de fala"
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Roberto teste libresprite
+    - name: "bal\xE3o de fala"
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 5
-        y: 2
-        width: 59
-        height: 44
-      spriteId: a03a1ea3f0c3919449e9a264f6ffb5fd
+        x: 2
+        y: 0
+        width: 60
+        height: 16
+      spriteId: a98204fe89af85740ba99725179767b2
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
@@ -181,5 +181,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 64, y: 64}
-  previousTextureSize: {x: 128, y: 64}
+  canvasSize: {x: 64, y: 16}
+  previousTextureSize: {x: 128, y: 32}

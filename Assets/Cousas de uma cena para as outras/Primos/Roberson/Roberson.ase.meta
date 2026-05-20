@@ -129,7 +129,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Roberson
     originalName: 
-    pivot: {x: 0.57142854, y: -0.046511628}
+    pivot: {x: 0.5686275, y: -0.022222223}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -137,8 +137,8 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 49
-      height: 43
+      width: 51
+      height: 45
     spriteID: 36e59a95d99ddc646bd2add99bdcab1b
     spriteBone: []
     spriteOutline: []
@@ -167,10 +167,10 @@ ScriptedImporter:
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 4
-        y: 2
-        width: 49
-        height: 43
+        x: 3
+        y: 1
+        width: 51
+        height: 45
       spriteId: 36e59a95d99ddc646bd2add99bdcab1b
     linkedCells: []
     tileCells: []

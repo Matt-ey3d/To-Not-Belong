@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
+    public TMP_Text whoDis;
+    public GameObject speechBubble;
     public string[] dialogueRui;
     public string[] dialogueRoberson;
     //public string[,] dialogue; maybe??
@@ -14,8 +16,6 @@ public class Falas : MonoBehaviour
     public float Speed;
     public TMP_Text Enter;
     public bool canClickEnter = true;
-    int contar = 0;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -37,7 +37,8 @@ public class Falas : MonoBehaviour
     }
     public void Diálogo()
     {
-        switch(GetComponent<RobertoInteragir>().primo)
+        whoDis.text = GetComponent<RobertoInteragir>().primo;
+        switch (whoDis.text)
         {
             case "Rui":
                 currentDialogue = dialogueRui;
@@ -46,18 +47,19 @@ public class Falas : MonoBehaviour
                 currentDialogue = dialogueRoberson;
                 break;
         }
+        speechBubble.SetActive(true);
         StartCoroutine(Typing());
     }
     public void NoText()
     {
         falatexto.text = "";
+        whoDis.text = "";
         index = 0;
+        speechBubble.SetActive(false);
     }
     IEnumerator Typing()
     {
-        contar++;
         char[] fala = currentDialogue[index].ToCharArray();
-        Debug.Log(contar);
         foreach (char letter in fala)
         {
             falatexto.text += letter;
