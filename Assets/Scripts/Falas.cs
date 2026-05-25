@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
@@ -25,7 +26,7 @@ public class Falas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (falatexto.text == currentDialogue[index])
+        if ((index > 0 || index < currentDialogue.Length) && falatexto.text == currentDialogue[index])
         {
             Enter.gameObject.SetActive(true);
         }
