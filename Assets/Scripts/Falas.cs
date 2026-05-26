@@ -8,6 +8,7 @@ public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
     public TMP_Text whoDis;
+    //public TMP_Text Enter;
     public GameObject speechBubble;
     public string[] dialogueRui;
     public string[] dialogueRoberson;
@@ -15,7 +16,6 @@ public class Falas : MonoBehaviour
     public string[] currentDialogue;
     int index = 0;
     public float Speed;
-    public TMP_Text Enter;
     public bool canClickEnter = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -26,10 +26,10 @@ public class Falas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((index > 0 || index < currentDialogue.Length) && falatexto.text == currentDialogue[index])
+        /*if ((index > 0 || index < currentDialogue.Length) && falatexto.text == currentDialogue[index])
         {
             Enter.gameObject.SetActive(true);
-        }
+        }*/
         if (Keyboard.current.enterKey.isPressed && canClickEnter)
         {
             PróximaLinha();
@@ -70,7 +70,6 @@ public class Falas : MonoBehaviour
     }
     public void PróximaLinha()
     {
-        Enter.gameObject.SetActive(false);
         if (index < currentDialogue.Length - 1)
         {
             index++;
