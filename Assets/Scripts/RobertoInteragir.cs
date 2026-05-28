@@ -26,7 +26,7 @@ public class RobertoInteragir : MonoBehaviour
             if (home)
             {
                 Debug.Log("entra em casa Roberto!!!!!!");
-                Roberto.GetComponent<MudaCena>().ChangeScene();
+                //Roberto.GetComponent<MudaCena>().ChangeScene();
                 home = false;
                 Texto.gameObject.SetActive(false);
                 fadeout = true;

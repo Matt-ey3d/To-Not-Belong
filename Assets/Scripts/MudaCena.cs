@@ -2,16 +2,16 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.VisualScripting;
+using UnityEngine.UI;
 
 public class MudaCena : MonoBehaviour
 {
-    //https://stackoverflow.com/questions/31184731/how-to-show-an-image-in-unity-by-code
-    public Texture2D fadeOutTexture;
-    public GameObject fadeOut;
-    float alpha = 0.2f;
+    public Image fadeOut;
+    float alpha = 0.1f;
     Scene scene;
     Color currentColor;
     bool fading = false;
+    float timeInicio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,25 +20,31 @@ public class MudaCena : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        //GetComponent<SpriteRenderer>(). se der merda
         if (GetComponent<RobertoInteragir>().fadeout == true)
         {
             if (fading == false)
             {
                 fading = true;
+                timeInicio = Time.time;
                 scene = SceneManager.GetActiveScene();
             }
             if (scene == SceneManager.GetActiveScene())
             {
-                fadeOutTexture.GetComponent<SpriteRenderer>().color += new Color(0, 0, 0, alpha);
-                currentColor = fadeOutTexture.GetComponent<SpriteRenderer>().color;
+                fadeOut.color += new Color(0, 0, 0, alpha);
+                currentColor = fadeOut.color;
             }
             else
             {
-                fadeOutTexture.GetComponent<SpriteRenderer>().color -= new Color(0, 0, 0, alpha);
-                currentColor = fadeOutTexture.GetComponent<SpriteRenderer>().color;
+                fadeOut.color -= new Color(0, 0, 0, alpha);
+                currentColor = fadeOut.color;
             }
-            if (currentColor.a == 1)
+            if (currentColor.a == 1 && Time.time > timeInicio + 500000)
             {
+                Debug.Log(timeInicio);
+                Debug.Log(Time.time);
+                /*while (Time.time < timeInicio + 500000f)
+                { }*/
                 ChangeScene();
             }
             else if(currentColor.a == 0 && fading == true)
