@@ -26,7 +26,6 @@ public class RobertoInteragir : MonoBehaviour
             if (home)
             {
                 Debug.Log("entra em casa Roberto!!!!!!");
-                //Roberto.GetComponent<MudaCena>().ChangeScene();
                 home = false;
                 Texto.gameObject.SetActive(false);
                 fadeout = true;
@@ -34,7 +33,6 @@ public class RobertoInteragir : MonoBehaviour
             else if (goOutside)
             {
                 Debug.Log("sai de casa Roberto!!!!!!");
-                Roberto.GetComponent<MudaCena>().ChangeScene();
                 goOutside = false;
                 Texto.gameObject.SetActive(false);
                 fadeout = true;
@@ -53,20 +51,17 @@ public class RobertoInteragir : MonoBehaviour
         if (collider.name == "Home")
         {
             home = true;
-            Texto.text = "[E] Entrar";
             Texto.gameObject.SetActive(true);
         }
         else if (collider.name == "Door")
         {
             goOutside = true;
-            Texto.text = "[E] Sair";
             Texto.gameObject.SetActive(true);
         }
         else if (collider.tag == "Cousin")
         {
             primo = collider.name;
             cousin = true;
-            Texto.text = "[E] Conversar";
             Texto.gameObject.SetActive(true);
         }
     }
