@@ -540,10 +540,10 @@ MonoBehaviour:
   whoDis: {fileID: 5726689809631598527}
   speechBubble: {fileID: 13729298}
   dialogueRui:
-  - "\"Ol\xE1!\""
-  - '"Viste a centopeia a fugir?"'
-  - '"Era GRANDE!"'
-  - "\"Espero que n\xE3o haja aqui outra...\""
+  - '"Hi!"'
+  - '"Did you see the centipede run away?"'
+  - '"It was HUGE!"'
+  - '"I hope there''s not a second one..."'
   dialogueRoberson:
   - "\"'T\xE3o, Roberto, como \xE9 que vais?\""
   - "\"J\xE1 chegaste a ver os teus pais?\""
@@ -4263,6 +4263,25 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305660885537276644, guid: 05a69922fb9c5d34089b764f07046b9a,
+        type: 3}
+      propertyPath: m_text
+      value: '[E] Interact
+
+        [Enter] Next
+
+        [H] Help menu
+
+        [Q]
+        Reputation menu'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069611718655119245, guid: 05a69922fb9c5d34089b764f07046b9a,
+        type: 3}
+      propertyPath: m_text
+      value: '[F] Inventory
+
+        [Esc] Leave'
       objectReference: {fileID: 0}
     - target: {fileID: 8703421317634355013, guid: 05a69922fb9c5d34089b764f07046b9a,
         type: 3}
