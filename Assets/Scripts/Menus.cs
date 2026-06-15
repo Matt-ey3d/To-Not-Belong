@@ -20,6 +20,10 @@ public class Menus : MonoBehaviour
         {
             MenuAjuda();
         }
+        if (Keyboard.current.qKey.isPressed)
+        {
+            MenuReputation();
+        }
         if(Keyboard.current.escapeKey.isPressed)
         {
             CloseMenus();
@@ -29,6 +33,11 @@ public class Menus : MonoBehaviour
     {
         CloseMenus();
         helpMenu.SetActive(true);
+    }
+    public void MenuReputation()
+    {
+        CloseMenus();
+        reputationMenu.SetActive(true);
     }
     void CloseMenus()
     {

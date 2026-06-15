@@ -608,6 +608,7 @@ MonoBehaviour:
   layerfloor:
     serializedVersion: 2
     m_Bits: 8
+  sprite: {fileID: 1631407941}
 --- !u!50 &340178255
 Rigidbody2D:
   serializedVersion: 5
@@ -3245,6 +3246,12 @@ PrefabInstance:
       addedObject: {fileID: 340178268}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
     type: 3}
+--- !u!212 &1631407941 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3626916397498700004, guid: ffeebdb5e5338964da9b9d8cc2df2aa1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1631407940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1940500646
 GameObject:
   m_ObjectHideFlags: 0
