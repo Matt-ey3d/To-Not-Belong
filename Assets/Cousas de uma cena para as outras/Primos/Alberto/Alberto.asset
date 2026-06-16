@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c2b0184f465c746953dd2dd368ff1f, type: 3}
+  m_Name: Alberto
+  m_EditorClassIdentifier: Assembly-CSharp::DadosPrimos
+  characterName: Alberto
+  portrait: {fileID: -8701739362455444715, guid: 0d218f3035c1ff54d8796ad68f39d487,
+    type: 3}
+  reputationPoints: 0
