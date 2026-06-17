@@ -3,16 +3,15 @@ using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterCard : MonoBehaviour
+public class CartãoPrimo : MonoBehaviour
 {
-    [Header("UI References")]
     public Image portraitImage;
     public TextMeshProUGUI cousinName;
     public TextMeshProUGUI reputation;
     public Image highlightBorder;
-    CharacterData _data;
-    System.Action<CharacterCard> _onSelected; //tell the menu when I'm clicked
-    public void Init(CharacterData data, System.Action<CharacterCard> onSelected)
+    DadosPrimos _data;
+    System.Action<CartãoPrimo> _onSelected; //tell the menu when I'm clicked
+    public void Init(DadosPrimos data, System.Action<CartãoPrimo> onSelected)
     {
         _data = data;
         _onSelected = onSelected;

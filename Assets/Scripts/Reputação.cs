@@ -4,10 +4,10 @@ using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterMenuManager : MonoBehaviour
+public class Reputação : MonoBehaviour
 {
-    public CharacterData[] characters;
-    public CharacterCard cardPrefab;
+    public DadosPrimos[] characters;
+    public CartãoPrimo cardPrefab;
     public Transform gridParent;
     public int columns = 4;
     public int rows = 2;    
@@ -17,7 +17,7 @@ public class CharacterMenuManager : MonoBehaviour
     public TextMeshProUGUI pageLabel;
     public Button prevPageButton;
     public Button nextPageButton;
-    List<CharacterCard> _cards = new();
+    List<CartãoPrimo> _cards = new();
     int _selectedIndex = 0;
     int _currentPage = 0;
     int _cardsPerPage;
@@ -84,7 +84,6 @@ public class CharacterMenuManager : MonoBehaviour
         if (prevPageButton) prevPageButton.interactable = _currentPage > 0;
         if (nextPageButton) nextPageButton.interactable = _currentPage < _totalPages - 1;
     }
-
     void TryMove(int dx, int dy)
     {
         int col = _selectedIndex % columns;
@@ -98,17 +97,15 @@ public class CharacterMenuManager : MonoBehaviour
     }
     void Select(int index)
     {
-        _cards[_selectedIndex].SetHighlight(false);  // un-highlight the previous card
+        _cards[_selectedIndex].SetHighlight(false);
         _selectedIndex = index;
-        _cards[_selectedIndex].SetHighlight(true);   // highlight the newly selected card
-
-        // Update the detail panel if the references are assigned in the Inspector
+        _cards[_selectedIndex].SetHighlight(true);
         var data = characters[_selectedIndex];
         if (detailPortrait) detailPortrait.sprite = data.portrait;
         if (detailName) detailName.text = data.characterName;
         if (detailRep) detailRep.text = $"Reputation: {data.reputationPoints}";
     }
-    void OnCardClicked(CharacterCard card)
+    void OnCardClicked(CartãoPrimo card)
     {
         int index = _cards.IndexOf(card);
         Select(index);

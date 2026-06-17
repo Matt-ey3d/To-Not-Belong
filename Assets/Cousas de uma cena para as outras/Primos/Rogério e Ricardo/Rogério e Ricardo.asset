@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10c2b0184f465c746953dd2dd368ff1f, type: 3}
-  m_Name: DadosPrimos
+  m_Name: "Rog\xE9rio e Ricardo"
   m_EditorClassIdentifier: Assembly-CSharp::DadosPrimos
   characterName: "Rog\xE9rio and Ricardo"
   portrait: {fileID: -4696752136046376645, guid: 46f4d567cc60597429d8168f1370806c,
