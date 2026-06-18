@@ -95,12 +95,21 @@ public class Reputação : MonoBehaviour
         if (newIndex < 0 || newIndex >= _cards.Count) return;
         Select(newIndex);
     }
+    public void ChangeReputation()
+    {
+        string characterName = GetComponent<RobertoInteragir>().primo;
+        characterName.reputationPoints += 20;
+        Select(_selectedIndex);
+        return;
+    }
     void Select(int index)
     {
         _cards[_selectedIndex].SetHighlight(false);
         _selectedIndex = index;
         _cards[_selectedIndex].SetHighlight(true);
-        var data = characters[_selectedIndex];
+        int globalIndex = (_currentPage * _cardsPerPage) + index;
+        if (globalIndex >= characters.Length) return;
+        var data = characters[globalIndex];
         if (detailPortrait) detailPortrait.sprite = data.portrait;
         if (detailName) detailName.text = data.characterName;
         if (detailRep) detailRep.text = $"Reputation: {data.reputationPoints}";
@@ -111,15 +120,9 @@ public class Reputação : MonoBehaviour
         Select(index);
         ConfirmSelection();
     }
-    // ---------------------------------------------------------------------------
-    // Called when the player confirms a selection (Enter or click).
-    // Right now it just logs — replace this with whatever should happen:
-    // open a dialogue, load a scene, show a profile screen, etc.
-    // ---------------------------------------------------------------------------
     void ConfirmSelection()
     {
         int globalIndex = _currentPage * _cardsPerPage + _selectedIndex;
         Debug.Log($"Selected: {characters[_selectedIndex].characterName}");
-        // TODO: trigger your game logic here
     }
 }

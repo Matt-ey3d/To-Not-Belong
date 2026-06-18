@@ -6,11 +6,9 @@ public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
     public TMP_Text whoDis;
-    //public TMP_Text Enter;
     public GameObject speechBubble;
     public string[] dialogueRui;
     public string[] dialogueRoberson;
-    //public string[,] dialogue; maybe??
     public string[] currentDialogue;
     int index = 0;
     public float Speed;
@@ -24,10 +22,6 @@ public class Falas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if ((index > 0 || index < currentDialogue.Length) && falatexto.text == currentDialogue[index])
-        {
-            Enter.gameObject.SetActive(true);
-        }*/
         if (Keyboard.current.enterKey.isPressed && canClickEnter)
         {
             PróximaLinha();
@@ -66,6 +60,10 @@ public class Falas : MonoBehaviour
         }
         canClickEnter = true;
     }
+    void AddReputation()
+    {
+        GetComponent<Reputação>().ChangeReputation();
+    }
     public void PróximaLinha()
     {
         if (index < currentDialogue.Length - 1)
@@ -76,6 +74,7 @@ public class Falas : MonoBehaviour
         }
         else
         {
+            AddReputation();
             NoText();
         }
     }

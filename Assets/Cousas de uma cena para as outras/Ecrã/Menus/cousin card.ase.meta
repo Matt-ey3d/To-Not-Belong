@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 15f2286f1f4401a4d868b63c780b4e3c
+guid: e30dd868392603a4080a25bb13132627
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: cousin select
+  - name: cousin card
     originalName: 
     pivot: {x: 0.5, y: -0.024590163}
     alignment: 9
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 60
       height: 122
-    spriteID: 337d56249541f114cb082e4d7503608d
+    spriteID: ba156a8d8b5eb74458fd048a0cd91a02
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,17 +153,17 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1240213381
+      value0: 3985891549
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: cousin select
+    name: cousin card
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: cousin select
+    - name: cousin card
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -171,7 +171,7 @@ ScriptedImporter:
         y: 3
         width: 60
         height: 122
-      spriteId: 337d56249541f114cb082e4d7503608d
+      spriteId: ba156a8d8b5eb74458fd048a0cd91a02
     linkedCells: []
     tileCells: []
     tileSetIndex: 0
