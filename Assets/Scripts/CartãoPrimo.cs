@@ -17,7 +17,7 @@ public class CartãoPrimo : MonoBehaviour
         _onSelected = onSelected;
         portraitImage.sprite = data.portrait;
         cousinName.text = data.characterName;
-        reputation.text = $"{data.reputationPoints} pts";
+        reputation.text = $"{data.reputationPoints}";
         SetHighlight(false);
     }
     public void SetHighlight(bool active)

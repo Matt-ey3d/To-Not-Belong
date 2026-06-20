@@ -33,19 +33,19 @@ public class Menus : MonoBehaviour
     {
         CloseMenus();
         helpMenu.SetActive(true);
-        Time.timeScale = 0f;
+        GetComponent<RobertoMover>().canMove = false;
     }
     public void MenuReputation()
     {
         CloseMenus();
         reputationMenu.SetActive(true);
-        Time.timeScale = 0f;
+        GetComponent<RobertoMover>().canMove = false;
     }
     void CloseMenus()
     {
         helpMenu.SetActive(false);
         reputationMenu.SetActive(false);
         inventory.SetActive(false);
-        Time.timeScale = 1f;
+        GetComponent<RobertoMover>().canMove = true;
     }
 }

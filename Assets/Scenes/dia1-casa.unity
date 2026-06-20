@@ -441,6 +441,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   sprite: {fileID: 340178270}
+  canMove: 1
 --- !u!50 &340178255
 Rigidbody2D:
   serializedVersion: 5
@@ -565,15 +566,31 @@ MonoBehaviour:
   whoDis: {fileID: 5726689809631598527}
   speechBubble: {fileID: 13729298}
   dialogueRui:
-  - '"Hi!"'
-  - '"Did you see the centipede run away?"'
-  - '"It was HUGE!"'
-  - '"I hope there''s not a second one..."'
-  dialogueRoberson:
-  - "\"'T\xE3o, Roberto, como \xE9 que vais?\""
-  - "\"J\xE1 chegaste a ver os teus pais?\""
-  - "\"Ainda n\xE3o?\""
-  - "\"Eles h\xE3o de voltar, eu prometo.\""
+  - lines:
+    - '"Hi!"'
+    - '"Did you see the cemtipede run away?"'
+    - '"It was HUGE!"'
+    - '"I hope there isn''t another one..."'
+  - lines:
+    - '"What do you think about climate change?"'
+    - '"I mean, climate change happens naturally with the Sun''s growth..."'
+    - '"But humans made it worse!"'
+    - '"We need to do something about it."'
+  - lines:
+    - '"All the work I have to do..."'
+    - '"Just thinking about it makes me tired."'
+    - '"Wanna help me out later?"'
+  - lines:
+    - '"Ever realized that almost our entire family is made up of geometric solids?"'
+    - '"Weird, isn''t it?"'
+    - '"Teachers could do homework about us."'
+  - lines:
+    - '"Why are there 3 Robertos?"'
+    - '"I thought every name would be unique!"'
+    - '"That''s the family''s philosophy!"'
+    - '"I guess you''re not the one at fault here..."'
+    - '"...No, you don''t need to change your name."'
+  dialogueRoberson: []
   currentDialogue: []
   Speed: 0.02
   canClickEnter: 1

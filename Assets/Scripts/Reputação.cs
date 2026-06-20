@@ -95,12 +95,31 @@ public class Reputação : MonoBehaviour
         if (newIndex < 0 || newIndex >= _cards.Count) return;
         Select(newIndex);
     }
+    public void RefreshCards()
+    {
+        for (int i = 0; i < _cards.Count; i++)
+        {
+            int globalIndex = _currentPage * _cardsPerPage + i;
+            if (globalIndex >= characters.Length) return;
+            _cards[i].reputation.text = $"{characters[globalIndex].reputationPoints}";
+        }
+    }
     public void ChangeReputation()
     {
         string characterName = GetComponent<RobertoInteragir>().primo;
-        characterName.reputationPoints += 20;
-        Select(_selectedIndex);
-        return;
+        foreach (var character in characters)
+        {
+            if (character.characterName == characterName)
+            {
+                if (character.reputationPoints < 100)
+                {
+                    character.reputationPoints += 20;
+                }
+                RefreshCards();
+                Select(_selectedIndex);
+                return;
+            }
+        }
     }
     void Select(int index)
     {

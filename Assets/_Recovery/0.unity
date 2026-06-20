@@ -574,7 +574,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   sprite: {fileID: 1631407941}
-  canMove: 1
 --- !u!50 &340178255
 Rigidbody2D:
   serializedVersion: 5
@@ -700,28 +699,10 @@ MonoBehaviour:
   speechBubble: {fileID: 81822269}
   dialogueRui: []
   dialogueRoberson:
-  - lines:
-    - '"Hey, Roberto, how ya doin''?"'
-    - '"Have you seen your parents yet?"'
-    - '"...No?"'
-    - '"They''ll come back, I promise."'
-  - lines:
-    - '"Have you ever traveled by boat?"'
-    - '"You should try it sometime."'
-  - lines:
-    - '"People always ask me stupid questions about my eyepatch."'
-    - '"One of the few questions that wasn''t stupid was:"'
-    - "\"\xABIs it harder or easier to aim things with one eye?\xBB\""
-    - '"For some people it''s easier. Not for me though."'
-    - '"I lost my dominant eye, so it''s harder for me."'
-  - lines:
-    - '"You like shellfish?"'
-    - '"They''re really easy to find!"'
-    - '"Some people don''t like the texture, I don''t get it."'
-  - lines:
-    - '"Did you know..."'
-    - '"The brighter and more colorful an animal''s skin is, the more poisonous?"'
-    - '"Don''t get poisoned out there."'
+  - '"Hey, Roberto, how ya doin''?"'
+  - '"Have you seen your parents yet?"'
+  - '"No?" '
+  - '"They''ll come back, I promise."'
   currentDialogue: []
   Speed: 0.02
   canClickEnter: 1
@@ -3400,7 +3381,7 @@ PrefabInstance:
     - target: {fileID: 3284151062742626138, guid: 1cb575999183bce47936720b403fbc5f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -2,14 +2,21 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+[System.Serializable]
+public class Conversation
+{
+    public string[] lines;
+}
 public class Falas : MonoBehaviour
 {
     public TMP_Text falatexto;
     public TMP_Text whoDis;
     public GameObject speechBubble;
-    public string[] dialogueRui;
-    public string[] dialogueRoberson;
-    public string[] currentDialogue;
+    public Conversation[] dialogueRui;
+    public Conversation[] dialogueRoberson;
+    public Conversation[] currentDialogue;
+    int conversationIndex = 0;
     int index = 0;
     public float Speed;
     public bool canClickEnter = true;
@@ -30,6 +37,7 @@ public class Falas : MonoBehaviour
     }
     public void Diálogo()
     {
+        GetComponent<RobertoMover>().canMove = false;
         whoDis.text = GetComponent<RobertoInteragir>().primo;
         switch (whoDis.text)
         {
@@ -49,10 +57,11 @@ public class Falas : MonoBehaviour
         whoDis.text = "";
         index = 0;
         speechBubble.SetActive(false);
+        GetComponent<RobertoMover>().canMove = true;
     }
     IEnumerator Typing()
     {
-        char[] fala = currentDialogue[index].ToCharArray();
+        char[] fala = currentDialogue[conversationIndex].lines[index].ToCharArray();
         foreach (char letter in fala)
         {
             falatexto.text += letter;
@@ -66,7 +75,7 @@ public class Falas : MonoBehaviour
     }
     public void PróximaLinha()
     {
-        if (index < currentDialogue.Length - 1)
+        if (index < currentDialogue[conversationIndex].lines.Length - 1)
         {
             index++;
             falatexto.text = "";
@@ -76,6 +85,7 @@ public class Falas : MonoBehaviour
         {
             AddReputation();
             NoText();
+            conversationIndex = (conversationIndex + 1) % currentDialogue.Length;
         }
     }
 }

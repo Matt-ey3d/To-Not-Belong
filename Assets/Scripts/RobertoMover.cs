@@ -11,6 +11,7 @@ public class RobertoMover : MonoBehaviour
     public BoxCollider2D floor;
     public LayerMask layerfloor;
     public SpriteRenderer sprite;
+    public bool canMove = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +23,7 @@ public class RobertoMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && noChão)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W)) && noChão && canMove)
         {
             Roberto.linearVelocity = new Vector2(Roberto.linearVelocityX, salto);
             noChão = false;
@@ -31,15 +32,18 @@ public class RobertoMover : MonoBehaviour
     void FixedUpdate()
     {
         float x = 0f;
-        if (Keyboard.current.aKey.isPressed)
+        if (canMove)
         {
-            sprite.flipX = true;
-            x = -1f;
-        }
-        if (Keyboard.current.dKey.isPressed)
-        {
-            sprite.flipX = false;
-            x = 1f;
+            if (Keyboard.current.aKey.isPressed)
+            {
+                sprite.flipX = true;
+                x = -1f;
+            }
+            if (Keyboard.current.dKey.isPressed)
+            {
+                sprite.flipX = false;
+                x = 1f;
+            }
         }
         Roberto.linearVelocity = new Vector2(x * speed, Roberto.linearVelocity.y);
     }
